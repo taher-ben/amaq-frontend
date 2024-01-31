@@ -37,7 +37,7 @@ html {
 }
 
 body {
-    direction: ltr;
+    /* direction: ltr; */
     font-family: 'Cairo', sans-serif !important;
     background-color: #eeee;
 }
