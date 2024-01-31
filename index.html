@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> شركة أعماق الدولية للخدمات النفطية </title>
+    <!-- Awesome libriry -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- start bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <!-- style head and footer -->
+    <link rel="stylesheet" href="css/headerandfooter.css">
+    <!-- WEBSITE ICON  -->
+    <link rel="icon" type="image/x-icon" href="media/logo-site.gif">
+    <!-- mian style sheet -->
+    <link rel="stylesheet" href="css/css.css">
+    <!-- normalize file  -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- google font cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+        rel="stylesheet">
+    <!-- cdn axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- axios cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <!-- start header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container align-items-start  flex-row-reverse">
+            <div>
+                <a class="navbar-brand image " href="index.html">
+                    <img src="media/logo.png" style="width: 220px;" alt="">
+                </a>
+            </div>
+            <div>
+                <button  class="navbar-toggler mt-2 mb-2" type="button" style="color:#d22d28; border-color: #d22d28;"
+                    data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="main">
+                    <ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
+                        <li class="d-flex align-items-center">
+                            <i class="fa-solid fa-globe" id="trans"></i>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2 p-lg-3 " aria-current="page" href="index.html" data-lang="home_head"> الرئيسية</a>
+                        </li>
+                        <li class="nav-item dropdown drop">
+                            <a class="nav-link dropdown-toggle   p-2 p-lg-3" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" data-lang="header_link_1">
+                                حول الشركة
+                            </a>
+                            <ul class="dropdown-menu down   p-2 p-lg-3" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a  class="dropdown-item" href="pages/word.html" data-lang="header_link_2"> كلمة المدير العام </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="pages/visian.html" data-lang="header_link_3"> رؤيتنا </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="pages/message.html" data-lang="header_link_4"> رسالتنا </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="pages/goals.html" data-lang="header_link_5"> أهدافنا </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="pages/rate-us.html" data-lang="header_link_6"> قيمنا </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="nav-link p-2 p-lg-3 how" href="pages/servces.html" data-lang="header_link_7">خدماتنا </a>
+                        </li>
+                        <li>
+                            <a class="nav-link p-2 p-lg-3 how" href="pages/news.html" data-lang="header_link_8">أخبار الشركة
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link p-2 p-lg-3 how" href="pages/contact.html" data-lang="header_link_9">تواصل معنا</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end  header -->
+    <div id="headerContainer"></div>
+    <!-- start slider -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active content">
+                <div class="image">
+                    <img src="media/vist/harboten.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-caption text   h-50">
+                    <h5 class="fs-6 fs-md-1 fw-bold" data-lang="s_line1">زيارة شركة هاليبورتن لشركة اعماق للتعرف على
+                        المزيد ورؤية إمكانيات
+                        التعاون
+                    </h5>
+                    <p class="lh-lg d-none  d-md-block">
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item content">
+                <div class="image">
+                    <img src="media/vist/056A7377.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-caption text   h-50">
+                    <h5 class="fs-6 fs-md-1 fw-bold" data-lang="s_line2"> شركة الكهرباء تقوم بجولة في شركة أعماق لفحص
+                        واستكشاف آفاق التعاون
+                        والفهم الأعمق للعمليات
+                    </h5>
+                    <p class="lh-lg d-none  d-md-block">
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item content">
+                <div class="image">
+                    <img src="media/vist/lu.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-caption text   h-50">
+                    <h5 class="fs-6 fs-md-1 fw-bold" data-lang="s_line3">وزارة البيئة تنظم جولة استكشافية لموقع شركة
+                        أعماق الدولية لتقييم
+                        جهودها الاستدامية وحماية البيئة</h5>
+                    <p class="lh-lg d-none  d-md-block"> </p>
+                </div>
+            </div>
+            <div class="carousel-item content">
+                <div class="image">
+                    <img src="media/vist/math.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-caption text   h-50">
+                    <h5 class="fs-6 fs-md-1 fw-bold" data-lang="s_line4">إنشاء اول خليه للدفن الآمن ( مطمر صحي) في ليبيا
+                    </h5>
+                    <p class="lh-lg d-none  d-md-block"> </p>
+                </div>
+            </div>
+            <div class="carousel-item content">
+                <div class="image">
+                    <img src="media/news/AMAQ.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-caption text   h-50">
+                    <h5 class="fs-6 fs-md-1 fw-bold" data-lang="s_line5">شركة اعماق الدولية تبرز تقنياتها الحديثة
+                        والبيئية في قمة ليبيا
+                        للطاقة والاقتصاد</h5>
+                    <p class="lh-lg d-none  d-md-block"> </p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- end slider -->
+    <!-- start video -->
+    <div class="video">
+        <div class="container pt-5 pb-5">
+            <div class="row">
+                <div class="col-12 col-md-6 ">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zYpp7TphRlk?si=-1LF481Zd_ttGplO"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-12 col-md-6 just">
+                    <h3 data-lang="video_h"> شركة أعماق الدولية للخدمات النفطية </h3>
+                    <p class="lh-lg" data-lang="video_p">
+                        "أعماق الدولية للخدمات النفطية" هي واحدة من أكبر الشركات العاملة في مجالها، حيث تأسست في عام
+                        2022 كشركة خاصة ضمن شركات القطاع الخاص ،برأس مال يصل إلى عشرة ملايين دينار ليبي، ويقع مقرها
+                        الرئيسي في مدينة طرابلس. تتخصص الشركة في تقديم خدمات عالية الجودة للشركات العامة والمؤسسات التي
+                        تعمل في مجالات النفط والغاز ومشتقاتهما. تقدم الشركة مجموعة واسعة من الخدمات، بما في ذلك صيانة
+                        وتنظيف الخزانات وخطوط الأنابيب، ووحدات الإنتاج في الحقول والمصافي. كما تقوم بجمع وتنظيف ومعالجة
+                        جميع فاقدات النفط التي تنشأ نتيجة لعمليات الاستكشاف والحفر والصيانة، بما في ذلك البقايا والسوائل
+                        الناتجة عن عمليات الإنتاج وغيرها.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end video -->
+    <!-- Start Work Steps -->
+    <div class="work-steps" id="work-steps">
+        <div class="text">
+            <h3> </h3>
+            <p> </p>
+        </div>
+        <div class="container">
+            <div class="contact image">
+                <div class="image-slider">
+                    <img decoding="async" src="media/iso/1.jpg" alt="" class="one" />
+                    <img decoding="async" src="media/iso/2.jpg" alt="" class="one" />
+                    <img decoding="async" src="media/iso/3.jpg" alt="" class="one" />
+                </div>
+                <div class="circles">
+                    <button id="nex"><i class="fa-regular fa-circle"></i></button>
+                    <button id="pre"><i class="fa-regular fa-circle"></i></button>
+                    <button id="med"><i class="fa-regular fa-circle"></i></button>
+                </div>
+            </div>
+            <div class="info">
+                <div class="box">
+                    <img decoding="async" src="media/iso/1.jpg" alt="" />
+                    <div class="text">
+                        <h3 data-lang="iso_1"> شهادة ISO 45001:2018 </h3>
+                        <p data-lang="iso_p_1">
+                            تُعد شهادة ISO 45001:2018 شهادة دولية لنظام إدارة الصحة والسلامة المهنية. تهدف هذه الشهادة
+                            إلى ضمان بيئة عمل آمنة وصحية للعاملين في الشركة وتحسين أداءها في مجال السلامة والحماية
+                            العامة.تساهم هذه الشهادة في تحسين أداء الشركة البيئي وتعزز سمعتها في مجال الحفاظ على البيئة
+                            والتنمية المستدامة.
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img decoding="async" src="media/iso/2.jpg" alt="" />
+                    <div class="text">
+                        <h3 data-lang="iso_2"> شهادة ISO 14001:2015 </h3>
+                        <p data-lang="iso_p_2">
+                            تُعد شهادة ISO 14001:2015 شهادة دولية تتعلق بإدارة البيئة. وهي تُثبت التزام الشركة بتحقيق
+                            الاستدامة البيئية والحد من التأثير البيئي السلبي لعملياتها وأنشطتها.
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img decoding="async" src="media/iso/3.jpg" alt="" />
+                    <div class="text">
+                        <h3 data-lang="iso_3"> شهادة ISO 9001:2015 </h3>
+                        <p data-lang="iso_p_3">
+                            تُعد شهادة ISO 9001:2015 شهادة دولية تتعلق بنظام إدارة الجودة. تؤكد هذه الشهادة التزام
+                            الشركة بتقديم خدمات عالية الجودة وتلبية متطلبات العملاء بشكل مستمر. وتعكس الشهادة التزام
+                            الشركة بالتحسين المستمر والاستمرارية في تقديم أفضل الخدمات لعملائها.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Work Steps -->
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="box">
+                <h3 data-lang="co_name">شركة أعماق الدولية للخدمات النفطية </h3>
+                <ul class="social">
+                    <li>
+                        <a class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- <p class="text">
+                    تعد شركة أعماق الدولية للخدمات النفطية واحدة من أكبر الشركات التي تعمل في مجالها. إنها شركة خاصة تأسست في عام 2022 ، ضمن القطاع الخاص، برأس مال قدره 10،000،000 دينار ليبي
+                </p> -->
+            </div>
+            <div class="box">
+                <ul class="links">
+                    <li><a href="pages/word.html" data-lang="header_link_2"> كلمة المدير العام الشركة </a></li>
+                    <li><a href="pages/servces.html" data-lang="header_link_7"> خدماتنا </a></li>
+                    <li><a href="pages/message.html" data-lang="header_link_4"> رسالتنا </a></li>
+                    <li><a href="pages/contact.html" data-lang="footer_link_4"> أتصل بنا </a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <div class="line">
+                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                    <div class="info ps-3" data-lang="footer_link_5"> حي الاندلس , طرابلس , ليبيا </div>
+                </div>
+                <div class="line">
+                    <i class="far fa-clock fa-fw"></i>
+                    <div class="info ps-3" data-lang="footer_link_6">ساعات العمل من الساعة 8 صباحا الي 4 مساءً </div>
+                </div>
+                <div class="line">
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info d-flex flex-column align-items-start ps-3" >
+                        <span>+218-92-2129320</span>
+                        <span>+218-91-2129320</span>
+                        <span>+218-21-7103172</span>
+                        <span>+218-21-7103170</span>
+                    </div>
+                </div>
+            </div>
+            <div class=" footer-gallery">
+                <img src="media/white.png" alt="">
+            </div>
+        </div>
+        <p class="copyright" data-lang="footer_link_7"> &copy; جميع الحقوق محفوظة 2024.شركة أعماق الدولية للخدمات النفطية ذ م م. </p>
+    </div>
+    <!-- End Footer -->
+    <script src="lang/lang.js"></script>
+    <script src="js.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/bootstrap.bundle.min.js.map"></script> -->
+    <!-- <script src="js/all.min.js"></script> -->
+</body>
+
+</html>
