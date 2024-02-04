@@ -1,8 +1,16 @@
 // strat loader 
 window.addEventListener('load',()=>{
     const load = document.querySelector(".load");
-    console.log(load);
-    load.classList.add("load-hedden");
+    let lang = localStorage.getItem('lang');
+    if(lang === 'ar'){
+        setTimeout(() => {
+            load.classList.add("load-hedden");
+            
+        }, 2000);
+    }else{
+        load.classList.add("load-hedden");
+    }
+
     load.addEventListener("transitioend",() => {
         document.body.removeChild('load');
     })
