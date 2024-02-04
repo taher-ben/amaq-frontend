@@ -1,6 +1,158 @@
+// strat loader 
+window.addEventListener('load',()=>{
+    const load = document.querySelector(".load");
+    console.log(load);
+    load.classList.add("load-hedden");
+    load.addEventListener("transitioend",() => {
+        document.body.removeChild('load');
+    })
+})
+// end loader 
 
 window.onload = function () {
     const translations = {
+        'en': {
+            // start header
+            'home_head': "Home",
+            'header_link_1': 'About',
+            'header_link_2': "CEO's Message",
+            'header_link_3': "Our Vision",
+            'header_link_4': "Our Mission",
+            'header_link_5': "Our Goals",
+            'header_link_6': "Our value",
+            'header_link_7': "Our Services",
+            'header_link_8': "Company news",
+            'header_link_9': "Contact Us",
+            // end header
+            // start footer
+            'co_name': "Amaq Al-Dauleya For Oil Services",
+            'footer_link_4': "contact us",
+            'footer_link_5': "Hai Alandalus , Tripoli ,Libya",
+            'footer_link_6': "Working hours from 8 AM to 4 PM ",
+            'footer_link_7': " All rights reserved 2024. Amaq Al-Dauleya Oil Services LLC.",
+            // end footer
+            // startindex page
+            // start slider
+            's_line1': `Halliburton's visit to the Amaq Al-Dauleya Company aims to learn more about the company and explore potential collaboration opportunities.`,
+            's_line2': `The electricity company conducts a tour at the Amaq Al-Dauleya Company to examine and explore collaboration prospects, gaining a deeper understanding of its operations.`,
+            's_line3': 'The Ministry of Environment organizes an exploratory tour to the site of Amaq Al-Dauleya Company to assess its sustainability efforts and environmental protection measures.',
+            's_line4': 'Establishment of the First Sanitary Landfill in Libya.',
+            's_line5': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit',
+            // end slider
+            // start video
+            'video_h': 'Amaq Al-Dauleya For Oil Services',
+            'video_p': 'Amaq Al-Dauleya for Oil Services" is one of the largest companies operating in its field. It was established in 2022 as a private company within the private sector, with a capital of up to ten million Libyan Dinars. Its main headquarters is located in the city of Tripoli. The company specializes in providing high-quality services to public companies and institutions operating in the fields of oil, gas, and their derivatives. The company offers a wide range of services, including the maintenance and cleaning of tanks and pipelines, as well as production units in fields and refineries. Additionally, the company collects, cleans, and processes all oil losses resulting from exploration, drilling, and maintenance operations, including residues and liquids produced from production operations and others.',
+            // end video
+            // start iso
+            'iso_1': 'ISO 45001:2018 Certificate:',
+            'iso_2': 'ISO 14001:2015 Certificate:',
+            'iso_3': 'ISO 9001:2015 Certificate:',
+            'iso_p_1': `The ISO 45001:2018 certificate is an Al-Dauleya certification for the Occupational Health and Safety Management System. This certificate aims to ensure a safe and healthy working environment for employees within the company and to enhance its performance in the field of safety and general protection. This certificate contributes to improving the company's environmental performance and enhances its reputation in the areas of environmental conservation and sustainable development.`,
+            'iso_p_2': `The ISO 14001:2015 certificate is an Al-Dauleya certification related to environmental management. It demonstrates the company's commitment to achieving environmental sustainability and reducing the negative environmental impact of its operations and activities.`,
+            'iso_p_3': `The ISO 9001:2015 certificate is an Al-Dauleya certification related to the Quality Management System. This certificate confirms the company's commitment to providing high-quality services and continuously meeting customer requirements. It reflects the company's dedication to continuous improvement and the continuity of delivering the best services to its customers.`,
+            // end iso
+            // endindex page
+            // start contact page
+            // strat head page
+            'head_contact': 'Contact Us',
+            // end head page
+            // start contact page
+            // strat loicton
+            'content_email': 'E-mail',
+            'content_h4': 'Do you have a question?',
+            'contact_p_ms': 'Leave a message with your inquiry, and we will respond to you as soon as possible',
+            'contact_name': 'Name',
+            'contact_email': 'E-mail',
+            'contact_message': 'The message',
+            'contact_send': ' Send',
+            // end loicton
+            // end contact page
+            // start goals page
+            'head_goals': 'Our Goals',
+            'goals_h5_1': 'Improving Productivity',
+            'goals_h5_2': 'Environmental Sustainability',
+            'goals_h5_3': 'Continuous Improvement',
+            'goals_h5_4': 'Diversity and Expansion',
+            'goals_h5_5': 'Safety and Security',
+            'goals_h5_6': 'Communication and Interaction',
+            'goals_p1': `The company aims to improve productivity, reduce costs, and increase profitability by implementing modern and advanced technologies, and by focusing on training and developing qualified staff.`,
+            'goals_p2': 'The company strives to reduce its environmental impact by applying good working practices and complying with local and Al-Dauleya legislation related to the environment.',
+            'goals_p3': 'Amaq focuses on improving its operations, updating technologies, processes, and services to meet customer requirements and maintain its position as a strategic partner for major oil companies.',
+            'goals_p4': ' The company seeks to expand its business scope and increase its diversity in the services provided to customers by developing strong business relationships and strategic partnerships with new and existing customers.',
+            'goals_p5': 'The company is committed to providing a safe and healthy working environment for its employees and applying good working practices in all aspects related to safety and security.',
+            'goals_p6': `Amaq focuses on effective communication and interaction with customers, suppliers, local communities, and stakeholders to meet their needs, improve its reputation, and enhance the industry's reputation as a whole.`,
+            // start message page
+            'head_message': 'Our Message',
+            'message_p_1': 'The company aims to improve productivity, reduce costs, and increase profitability by implementing modern and advanced technologies, and by focusing on training and developing qualified staff.',
+            // end message page
+            // start news page
+            'head_news': 'Company News',
+            'home_head': 'Home',
+            'news_h3_1': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit',
+            'news_p_1': 'Amaq International, an oil services company, takes pride in participating in the events of the Libya Energy and Economy Summit',
+            'news_a_1': 'Read More',
+            'news_h3_2': 'Establishment of the First Sanitary Landfill in Libya',
+            'news_p_2': 'Amaq Al-Dauleya Company takes pride in offering effective and integrated environmental solutions. The company is earnestly committed to playing a pivotal role in the development and....',
+            // end news page
+            // start rate page
+            'head_rate': 'value',
+            'rate_li_1': ' Management and development of engineering, technical, and consulting services at the highest levels of quality, safety, and environmental preservation based on the best scientific technologies.',
+            'rate_li_2': 'Commitment to sponsor and develop human capabilities and contribute to social responsibility.',
+            'rate_li_3': 'Implementing new and innovative solutions to meet current and future challenges.',
+            'rate_li_4': 'Contributing to serving the economy of the Libyan state.',
+            // end rate page
+            // start servers page
+            "head_servce": 'Our Services',
+            "servce_li_1": 'Cleaning, maintenance, and installation of tanks, pipes, and other production units in fields, refineries, and oil ports.',
+            "servce_li_2": 'Drilling and maintenance of oil and gas wells using modern methods and machinery.',
+            "servce_li_3": 'Laying oil and gas pipelines, including excavation and backfilling.',
+            "servce_li_4": 'Construction and maintenance of offshore platforms.',
+            "servce_li_5": 'Laying oil and gas pipelines, including excavation and backfilling.',
+            "servce_li_6": 'Installation and maintenance of firefighting systems.',
+            "servce_li_7": 'Transportation and treatment of oil residues and water associated with drilling and production operations, as well as drilling fluids and waste.',
+            "servce_li_8": 'Treatment and remediation of contaminated soil.',
+            "servce_li_9": 'Containment and suction of oil spills on land and at sea.',
+            "servce_li_10": 'Installation and maintenance of treatment stations.',
+            "servce_li_11": 'Coating of pipes, tanks, and oil and gas refining plants and factories.',
+            "servce_li_12": 'Providing various technical services, including surveying, soil examination, liquid level measurement, inspection operations, lowering and installing gas valves, conducting production tests on wellheads or clusters, determining production quantities, and performing necessary mechanical and civil works.',
+            "servce_li_13": 'Removal of sand from fields, factories, and oil ports.',
+            "servce_li_14": 'Supply of drilling materials, cement, drilling mud, and oil well maintenance supplies.',
+            "servce_li_15": 'Collection, transportation, disposal, and treatment of used and damaged oils.',
+            "servce_li_16": 'Conducting environmental studies and surveys within oil fields and ports.',
+            "servce_li_17": 'Collecting and transporting industrial waste at oil sites.',
+            "servce_li_18": 'Transporting, treating, and finally disposing of oil waste resulting from exploration operations.',
+            "servce_li_19": 'Providing technical assistance in the field of oil services.',
+            "servce_li_20": 'Providing housing, accommodation, and transportation for companies within oil fields.',
+            "servce_li_21": 'Preparing oil engineering studies and designs.',
+            "servce_li_22": 'Providing technical consultancy in the field of oil services.',
+            "servce_li_23": 'Installation and welding of pipeline and tank lines in oil fields.',
+            "servce_li_24": 'Performing chemical and biological treatments for emergency oil spills in both land and marine environments.',
+            "servce_li_25": 'Performing excavation, demolition, soil leveling, and tank construction.',
+            "servce_li_26": 'Construction and maintenance of oil facilities, including the construction of oil and gas pumping stations, offshore floating platforms for gas and oil exploration, and the installation of oil refining plants and petrochemical factories.',
+            "servce_li_27": 'Removal of sand from fields, factories, and oil ports.',
+            "servce_li_28": 'Maintenance, drilling, well testing, subsurface measurements, and maintenance of oil and gas wells, oil pump units, compressors, gas turbines, furnaces, diesel engines, air compressors, water tanks, and water transport pipelines.',
+            // end servers page
+            // start visian page
+            'head_visian': 'Our Vision',
+            'visian_p': 'We look forward to achieving the deserved position as one of the major companies locally and globally in the field of providing competitive oil services. We also strive to be a key player in driving the development and progress in this vital sector, combining quality and innovation..',
+            // end visian page
+            // start word page
+            'word_h2': 'General Manager Vision',
+            'word_p': `Our vision at Amaq Al-Dauleya For Oil Services is to continue growing and expanding in the oil industries sector relying on modern technologies and maintaining the highest safety standards. The Amaq team consists of highly efficient and experienced individuals to achieve the company's goals, implement its strategy, and achieve the highest possible ethical standards. Amaq is characterized by strong and wise management capable of understanding the sector's needs and a staff with extensive scientific and professional experience that works tirelessly to provide services that meet the internationally recognized quality management system to meet customer aspirations and gain their trust to become the leading Amaq company at the local and regional levels in its field. The company relies on continuous improvement and development of its services, believing that keeping up and developing are the keys to success, and leading to building an exemplary relationship with its customers and achieving the deserved status among major local and global companies as the most important provider of oil industry services locally and regionally`,
+            // end word page
+            // start land page news
+            'head_news': 'Company News',
+            'head_title_1': 'Establishment of the First Sanitary Landfill in Libya',
+            'land_h2': 'Establishment of the First Sanitary Landfill in Libya',
+            'land_p': 'Amaq Al-Dauleya Company takes pride in offering effective and integrated environmental solutions. The company is earnestly committed to playing a pivotal role in the development and enhancement of the quality of life in Libya. In pursuit of this goal, the first secure burial site for managing hazardous waste has been established nationwide. The project of establishing the secure burial site aims to organize the management of hazardous waste operations and unify appropriate policies and methods for its proper and sustainable disposal. We place great emphasis on our commitment to best practices and rely on the latest technologies to preserve the environment and reduce harmful impacts on society. The secure burial site for hazardous waste is an integral part of our strategy aimed at minimizing and alleviating potential risks associated with the environment and public health. We are dedicated to delivering our services professionally and systematically, exerting every effort to achieve our goals in protecting the environment and human health. We are confident that our efforts will significantly contribute to building a better future for the coming generations.',
+            // end land page news
+            // start musem page
+            'head_news': 'Company News',
+            'musem_p': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit.',
+            'musem_h2': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit.',
+            'musem_p_1': `Amaq International, an oil services company, takes pride in participating in the events of the Libya Energy and Economy Summit. The company presented a comprehensive showcase that sheds light on its latest advanced technologies, committing to striking a balance between cutting-edge technology and environmental preservation. The company excelled in presenting innovative aspects of its services, particularly in the field of collecting, cleaning, and processing oil waste resulting from exploration, drilling, and maintenance operations. The company reiterated its steadfast commitment to sustainability by adopting environmentally friendly technologies that adhere to the highest Al-Dauleya and local standards. Amaq's participation in this summit is considered a significant opportunity to share its experiences and exchange knowledge with the Libyan oil sector. The company reaffirms its readiness for effective collaboration in enhancing the sector's infrastructure and stimulating economic growth in Libya.`,
+            // end musem page
+        },
         'ar': {
             // start header
             'home_head': "الرئيسية",
@@ -147,150 +299,10 @@ window.onload = function () {
             'musem_h2': 'شركة اعماق الدولية تبرز تقنياتها الحديثة والبيئية في قمة ليبيا للطاقة والاقتصاد',
             'musem_p_1': 'تتشرف شركة أعماق الدولية للخدمات النفطية بالمشاركة في فعاليات قمة ليبيا للطاقة والاقتصاد، حيث قامت الشركة بتقديم عرض شامل يسلط الضوء على أحدث تقنياتها المتقدمة، ملتزمة بتحقيق التوازن بين التقنية المتقدمة والحفاظ على البيئة. وتميزت الشركة في تقديم جوانب مبتكرة من خدماتها، خاصةً في مجال جمع وتنظيف ومعالجة فاقدات النفط، التي تنشأ نتيجة لعمليات الاستكشاف والحفر والصيانة. كما أكدت الشركة التزامها الراسخ بالاستدامة، حيث قامت بتبني تقنيات صديقة للبيئة تلتزم بأعلى المعايير الدولية والمحلية. تعتبر مشاركة أعماق الدولية في هذه القمة مناسبة مهمة لتقديم تجاربها وتبادل المعرفة مع القطاع النفطي الليبي، مع التأكيد على جاهزيتها للتعاون الفعّال في تعزيز البنية التحتية للقطاع وتحفيز النمو الاقتصادي في ليبيا.',
             // end musem page
-        },
-        'en': {
-            // start header
-            'home_head': "Home",
-            'header_link_1': 'About',
-            'header_link_2': "CEO's Message",
-            'header_link_3': "Our Vision",
-            'header_link_4': "Our Mission",
-            'header_link_5': "Our Goals",
-            'header_link_6': "Our value",
-            'header_link_7': "Our Services",
-            'header_link_8': "Company news",
-            'header_link_9': "Contact Us",
-            // end header
-            // start footer
-            'co_name': "Amaq Al-Dauleya For Oil Services",
-            'footer_link_4': "contact us",
-            'footer_link_5': "Hai Alandalus , Tripoli ,Libya",
-            'footer_link_6': "Working hours from 8 AM to 4 PM ",
-            'footer_link_7': " All rights reserved 2024. Amaq Al-Dauleya Oil Services LLC.",
-            // end footer
-            // startindex page
-            // start slider
-            's_line1': `Halliburton's visit to the Amaq Al-Dauleya Company aims to learn more about the company and explore potential collaboration opportunities.`,
-            's_line2': `The electricity company conducts a tour at the Amaq Al-Dauleya Company to examine and explore collaboration prospects, gaining a deeper understanding of its operations.`,
-            's_line3': 'The Ministry of Environment organizes an exploratory tour to the site of Amaq Al-Dauleya Company to assess its sustainability efforts and environmental protection measures.',
-            's_line4': 'Establishment of the First Sanitary Landfill in Libya.',
-            's_line5': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit',
-            // end slider
-            // start video
-            'video_h': 'Amaq Al-Dauleya For Oil Services',
-            'video_p': 'Amaq Al-Dauleya for Oil Services" is one of the largest companies operating in its field. It was established in 2022 as a private company within the private sector, with a capital of up to ten million Libyan Dinars. Its main headquarters is located in the city of Tripoli. The company specializes in providing high-quality services to public companies and institutions operating in the fields of oil, gas, and their derivatives. The company offers a wide range of services, including the maintenance and cleaning of tanks and pipelines, as well as production units in fields and refineries. Additionally, the company collects, cleans, and processes all oil losses resulting from exploration, drilling, and maintenance operations, including residues and liquids produced from production operations and others.',
-            // end video
-            // start iso
-            'iso_1': 'ISO 45001:2018 Certificate:',
-            'iso_2': 'ISO 14001:2015 Certificate:',
-            'iso_3': 'ISO 9001:2015 Certificate:',
-            'iso_p_1': `The ISO 45001:2018 certificate is an Al-Dauleya certification for the Occupational Health and Safety Management System. This certificate aims to ensure a safe and healthy working environment for employees within the company and to enhance its performance in the field of safety and general protection. This certificate contributes to improving the company's environmental performance and enhances its reputation in the areas of environmental conservation and sustainable development.`,
-            'iso_p_2': `The ISO 14001:2015 certificate is an Al-Dauleya certification related to environmental management. It demonstrates the company's commitment to achieving environmental sustainability and reducing the negative environmental impact of its operations and activities.`,
-            'iso_p_3': `The ISO 9001:2015 certificate is an Al-Dauleya certification related to the Quality Management System. This certificate confirms the company's commitment to providing high-quality services and continuously meeting customer requirements. It reflects the company's dedication to continuous improvement and the continuity of delivering the best services to its customers.`,
-            // end iso
-            // endindex page
-            // start contact page
-            // strat head page
-            'head_contact': 'Contact Us',
-            // end head page
-            // start contact page
-            // strat loicton
-            'content_email': 'E-mail',
-            'content_h4': 'Do you have a question?',
-            'contact_p_ms': 'Leave a message with your inquiry, and we will respond to you as soon as possible',
-            'contact_name': 'Name',
-            'contact_email': 'E-mail',
-            'contact_message': 'The message',
-            'contact_send': ' Send',
-            // end loicton
-            // end contact page
-            // start goals page
-            'head_goals': 'Our Goals',
-            'goals_h5_1': 'Improving Productivity',
-            'goals_h5_2': 'Environmental Sustainability',
-            'goals_h5_3': 'Continuous Improvement',
-            'goals_h5_4': 'Diversity and Expansion',
-            'goals_h5_5': 'Safety and Security',
-            'goals_h5_6': 'Communication and Interaction',
-            'goals_p1': `The company aims to improve productivity, reduce costs, and increase profitability by implementing modern and advanced technologies, and by focusing on training and developing qualified staff.`,
-            'goals_p2': 'The company strives to reduce its environmental impact by applying good working practices and complying with local and Al-Dauleya legislation related to the environment.',
-            'goals_p3': 'Amaq focuses on improving its operations, updating technologies, processes, and services to meet customer requirements and maintain its position as a strategic partner for major oil companies.',
-            'goals_p4': ' The company seeks to expand its business scope and increase its diversity in the services provided to customers by developing strong business relationships and strategic partnerships with new and existing customers.',
-            'goals_p5': 'The company is committed to providing a safe and healthy working environment for its employees and applying good working practices in all aspects related to safety and security.',
-            'goals_p6': `Amaq focuses on effective communication and interaction with customers, suppliers, local communities, and stakeholders to meet their needs, improve its reputation, and enhance the industry's reputation as a whole.`,
-            // start message page
-            'head_message': 'Our Message',
-            'message_p_1': 'The company aims to improve productivity, reduce costs, and increase profitability by implementing modern and advanced technologies, and by focusing on training and developing qualified staff.',
-            // end message page
-            // start news page
-            'head_news': 'Company News',
-            'home_head': 'Home',
-            'news_h3_1': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit',
-            'news_p_1': 'Amaq International, an oil services company, takes pride in participating in the events of the Libya Energy and Economy Summit',
-            'news_a_1': 'Read More',
-            'news_h3_2': 'Establishment of the First Sanitary Landfill in Libya',
-            'news_p_2': 'Amaq Al-Dauleya Company takes pride in offering effective and integrated environmental solutions. The company is earnestly committed to playing a pivotal role in the development and....',
-            // end news page
-            // start rate page
-            'head_rate': 'value',
-            'rate_li_1': ' Management and development of engineering, technical, and consulting services at the highest levels of quality, safety, and environmental preservation based on the best scientific technologies.',
-            'rate_li_2': 'Commitment to sponsor and develop human capabilities and contribute to social responsibility.',
-            'rate_li_3': 'Implementing new and innovative solutions to meet current and future challenges.',
-            'rate_li_4': 'Contributing to serving the economy of the Libyan state.',
-            // end rate page
-            // start servers page
-            "head_servce": 'Our Services',
-            "servce_li_1": 'Cleaning, maintenance, and installation of tanks, pipes, and other production units in fields, refineries, and oil ports.',
-            "servce_li_2": 'Drilling and maintenance of oil and gas wells using modern methods and machinery.',
-            "servce_li_3": 'Laying oil and gas pipelines, including excavation and backfilling.',
-            "servce_li_4": 'Construction and maintenance of offshore platforms.',
-            "servce_li_5": 'Laying oil and gas pipelines, including excavation and backfilling.',
-            "servce_li_6": 'Installation and maintenance of firefighting systems.',
-            "servce_li_7": 'Transportation and treatment of oil residues and water associated with drilling and production operations, as well as drilling fluids and waste.',
-            "servce_li_8": 'Treatment and remediation of contaminated soil.',
-            "servce_li_9": 'Containment and suction of oil spills on land and at sea.',
-            "servce_li_10": 'Installation and maintenance of treatment stations.',
-            "servce_li_11": 'Coating of pipes, tanks, and oil and gas refining plants and factories.',
-            "servce_li_12": 'Providing various technical services, including surveying, soil examination, liquid level measurement, inspection operations, lowering and installing gas valves, conducting production tests on wellheads or clusters, determining production quantities, and performing necessary mechanical and civil works.',
-            "servce_li_13": 'Removal of sand from fields, factories, and oil ports.',
-            "servce_li_14": 'Supply of drilling materials, cement, drilling mud, and oil well maintenance supplies.',
-            "servce_li_15": 'Collection, transportation, disposal, and treatment of used and damaged oils.',
-            "servce_li_16": 'Conducting environmental studies and surveys within oil fields and ports.',
-            "servce_li_17": 'Collecting and transporting industrial waste at oil sites.',
-            "servce_li_18": 'Transporting, treating, and finally disposing of oil waste resulting from exploration operations.',
-            "servce_li_19": 'Providing technical assistance in the field of oil services.',
-            "servce_li_20": 'Providing housing, accommodation, and transportation for companies within oil fields.',
-            "servce_li_21": 'Preparing oil engineering studies and designs.',
-            "servce_li_22": 'Providing technical consultancy in the field of oil services.',
-            "servce_li_23": 'Installation and welding of pipeline and tank lines in oil fields.',
-            "servce_li_24": 'Performing chemical and biological treatments for emergency oil spills in both land and marine environments.',
-            "servce_li_25": 'Performing excavation, demolition, soil leveling, and tank construction.',
-            "servce_li_26": 'Construction and maintenance of oil facilities, including the construction of oil and gas pumping stations, offshore floating platforms for gas and oil exploration, and the installation of oil refining plants and petrochemical factories.',
-            "servce_li_27": 'Removal of sand from fields, factories, and oil ports.',
-            "servce_li_28": 'Maintenance, drilling, well testing, subsurface measurements, and maintenance of oil and gas wells, oil pump units, compressors, gas turbines, furnaces, diesel engines, air compressors, water tanks, and water transport pipelines.',
-            // end servers page
-            // start visian page
-            'head_visian': 'Our Vision',
-            'visian_p': 'We look forward to achieving the deserved position as one of the major companies locally and globally in the field of providing competitive oil services. We also strive to be a key player in driving the development and progress in this vital sector, combining quality and innovation..',
-            // end visian page
-            // start word page
-            'word_h2': 'General Manager Vision',
-            'word_p': `Our vision at Amaq Al-Dauleya For Oil Services is to continue growing and expanding in the oil industries sector relying on modern technologies and maintaining the highest safety standards. The Amaq team consists of highly efficient and experienced individuals to achieve the company's goals, implement its strategy, and achieve the highest possible ethical standards. Amaq is characterized by strong and wise management capable of understanding the sector's needs and a staff with extensive scientific and professional experience that works tirelessly to provide services that meet the internationally recognized quality management system to meet customer aspirations and gain their trust to become the leading Amaq company at the local and regional levels in its field. The company relies on continuous improvement and development of its services, believing that keeping up and developing are the keys to success, and leading to building an exemplary relationship with its customers and achieving the deserved status among major local and global companies as the most important provider of oil industry services locally and regionally`,
-            // end word page
-            // start land page news
-            'head_news': 'Company News',
-            'head_title_1': 'Establishment of the First Sanitary Landfill in Libya',
-            'land_h2': 'Establishment of the First Sanitary Landfill in Libya',
-            'land_p': 'Amaq Al-Dauleya Company takes pride in offering effective and integrated environmental solutions. The company is earnestly committed to playing a pivotal role in the development and enhancement of the quality of life in Libya. In pursuit of this goal, the first secure burial site for managing hazardous waste has been established nationwide. The project of establishing the secure burial site aims to organize the management of hazardous waste operations and unify appropriate policies and methods for its proper and sustainable disposal. We place great emphasis on our commitment to best practices and rely on the latest technologies to preserve the environment and reduce harmful impacts on society. The secure burial site for hazardous waste is an integral part of our strategy aimed at minimizing and alleviating potential risks associated with the environment and public health. We are dedicated to delivering our services professionally and systematically, exerting every effort to achieve our goals in protecting the environment and human health. We are confident that our efforts will significantly contribute to building a better future for the coming generations.',
-            // end land page news
-            // start musem page
-            'head_news': 'Company News',
-            'musem_p': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit.',
-            'musem_h2': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit.',
-            'musem_p_1': `Amaq International, an oil services company, takes pride in participating in the events of the Libya Energy and Economy Summit. The company presented a comprehensive showcase that sheds light on its latest advanced technologies, committing to striking a balance between cutting-edge technology and environmental preservation. The company excelled in presenting innovative aspects of its services, particularly in the field of collecting, cleaning, and processing oil waste resulting from exploration, drilling, and maintenance operations. The company reiterated its steadfast commitment to sustainability by adopting environmentally friendly technologies that adhere to the highest Al-Dauleya and local standards. Amaq's participation in this summit is considered a significant opportunity to share its experiences and exchange knowledge with the Libyan oil sector. The company reaffirms its readiness for effective collaboration in enhancing the sector's infrastructure and stimulating economic growth in Libya.`,
-            // end musem page
         }
+
     };
+    let company_name = document.getElementById('company_name');
     let currentLanguage = localStorage.getItem('lang') || 'en';
     console.log(currentLanguage);
     let icon = document.getElementById('trans');
@@ -299,7 +311,11 @@ window.onload = function () {
         icon = document.getElementById('trans');
         if (icon) {
             icon.addEventListener('click', function () {
-                console.log('ok');
+                if(currentLanguage === 'ar'){
+                    company_name.innerText = ' Amaq Al-Dauleya For Oil Services ';
+                }else{
+                    company_name.innerText = ' أعماق الدولية للخدمات النفطية';
+                }
                 changeLanguage();
             });
             updateContent(currentLanguage);
