@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (language === "ar") {
             // نصوص باللغة العربية
             document.querySelector(".about-us-text").textContent = "نحن شركة رائدة في مجال الخدمات النفطية...";
-            document.querySelector(".services-header").textContent = "خدماتنا";
-            document.querySelector(".contact-header").textContent = "تواصل معنا";
+            document.querySelector(".services-header").textContent = "Our Services";
+            document.querySelector(".contact-header").textContent = "Contact Us";
             // قم بتحديث أي نصوص أخرى...
         } else if (language === "en") {
             // نصوص باللغة الإنجليزية
