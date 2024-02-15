@@ -97,7 +97,7 @@ window.onload = function () {
             'head_news': 'Company News',
             'home_head': 'Home',
             'news_h3_1': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit',
-            'news_p_1': 'Amaq International, an oil services company, takes pride in participating in the events of the Libya Energy and Economy Summit',
+            'news_p_1': 'Amaq Al-Dauleya, an oil services company, takes pride in participating in the events of the Libya Energy and Economy Summit',
             'news_a_1': 'Read More',
             'news_h3_2': 'Establishment of the First Sanitary Landfill in Libya',
             'news_p_2': 'Amaq Al-Dauleya Company takes pride in offering effective and integrated environmental solutions. The company is earnestly committed to playing a pivotal role in the development and....',
@@ -158,7 +158,7 @@ window.onload = function () {
             'head_news': 'Company News',
             'musem_p': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit.',
             'musem_h2': 'Amaq Al-Dauleya Company Highlights its Modern and Environmental Technologies at Libya Energy and Economy Summit.',
-            'musem_p_1': `Amaq International, an oil services company, takes pride in participating in the events of the Libya Energy and Economy Summit. The company presented a comprehensive showcase that sheds light on its latest advanced technologies, committing to striking a balance between cutting-edge technology and environmental preservation. The company excelled in presenting innovative aspects of its services, particularly in the field of collecting, cleaning, and processing oil waste resulting from exploration, drilling, and maintenance operations. The company reiterated its steadfast commitment to sustainability by adopting environmentally friendly technologies that adhere to the highest Al-Dauleya and local standards. Amaq's participation in this summit is considered a significant opportunity to share its experiences and exchange knowledge with the Libyan oil sector. The company reaffirms its readiness for effective collaboration in enhancing the sector's infrastructure and stimulating economic growth in Libya.`,
+            'musem_p_1': `Amaq Al-Dauleya, an oil services company, takes pride in participating in the events of the Libya Energy and Economy Summit. The company presented a comprehensive showcase that sheds light on its latest advanced technologies, committing to striking a balance between cutting-edge technology and environmental preservation. The company excelled in presenting innovative aspects of its services, particularly in the field of collecting, cleaning, and processing oil waste resulting from exploration, drilling, and maintenance operations. The company reiterated its steadfast commitment to sustainability by adopting environmentally friendly technologies that adhere to the highest Al-Dauleya and local standards. Amaq's participation in this summit is considered a significant opportunity to share its experiences and exchange knowledge with the Libyan oil sector. The company reaffirms its readiness for effective collaboration in enhancing the sector's infrastructure and stimulating economic growth in Libya.`,
             // end musem page
         },
         'ar': {
@@ -308,7 +308,6 @@ window.onload = function () {
             'musem_p_1': 'تتشرف شركة أعماق الدولية للخدمات النفطية بالمشاركة في فعاليات قمة ليبيا للطاقة والاقتصاد، حيث قامت الشركة بتقديم عرض شامل يسلط الضوء على أحدث تقنياتها المتقدمة، ملتزمة بتحقيق التوازن بين التقنية المتقدمة والحفاظ على البيئة. وتميزت الشركة في تقديم جوانب مبتكرة من خدماتها، خاصةً في مجال جمع وتنظيف ومعالجة فاقدات النفط، التي تنشأ نتيجة لعمليات الاستكشاف والحفر والصيانة. كما أكدت الشركة التزامها الراسخ بالاستدامة، حيث قامت بتبني تقنيات صديقة للبيئة تلتزم بأعلى المعايير الدولية والمحلية. تعتبر مشاركة أعماق الدولية في هذه القمة مناسبة مهمة لتقديم تجاربها وتبادل المعرفة مع القطاع النفطي الليبي، مع التأكيد على جاهزيتها للتعاون الفعّال في تعزيز البنية التحتية للقطاع وتحفيز النمو الاقتصادي في ليبيا.',
             // end musem page
         }
-
     };
     let company_name = document.getElementById('company_name');
     let currentLanguage = localStorage.getItem('lang') || 'en';
